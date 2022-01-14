@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+:root {
+  --primary-color: #264653;
+  --secondary-color: #2a9d8f;
+  --light-color: #e9c46a;
+  --mid-color: #f4a261;
+  --dark-color: #e76f51;
+}
+
+/* LANDING */
+#landing {
+  /* background-image: ; */
+  background-image: url(./bg.jpg),
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+  background-blend-mode: overlay;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Licorice", cursive;
+  color: var(--primary-color);
+}
+
+.landing-logo {
+  width: 300px;
+  height: 300px;
+}
+
+.landing-title {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.landing-title span {
+  display: block;
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+#about {
+  height: 100vh;
+  background: var(--secondary-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  /* align-items: center; */
+  padding: 10%;
+}
+.tab {
+  display: none;
+}
+
+.card-description-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.tarot-cardtainer {
+  flex-basis: 0;
+  flex-grow: 1;
+  display: flex;
+  /* border: 1px solid; */
+}
+
+.tarot {
+  width: 80%;
+  padding: 1%;
+  margin: 1%;
+  height: 100%;
+}
+input {
+  width: 31%;
+  margin: 1%;
+  padding: 20px;
+}
+
+#tarot-spread[value=""] {
+  border: 1px solid black;
+}
+
+#digital-tarot,
+#results {
+  padding: 10%;
+  display: none;
+}
+
+#results {
+  color: white;
+  background: var(--primary-color);
+}
+
+.reverse {
+  transform: rotateZ(180deg);
+}
+
+img {
+  width: 18%;
+  object-fit: contain;
+  margin: 30px 0;
+}
