@@ -43,7 +43,7 @@ spread.addEventListener("change", () => {
     ).innerHTML = `<h3>${selectedSpread.spread}</h3>
     <p>${selectedSpread.description}</p>`;
     createCardNumberInputs(selectedSpread.positions.length);
-    document.querySelector("#digital-tarot").style.display = "block";
+    document.querySelector("#digital-tarot").style.display = "flex";
     document.querySelector("#digital-tarot").scrollIntoView();
     document.querySelector("#results").style.display = "none";
     selectedCards.length = 0;

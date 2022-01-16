@@ -134,6 +134,8 @@ input {
   padding: 10%;
   display: none;
   min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #results {
@@ -152,6 +154,10 @@ img {
 
 .modal-dialog {
   max-width: 90% !important;
+}
+
+.modal-dialog img {
+  max-width: 300px;
 }
 
 .overlay {
@@ -304,5 +310,10 @@ img {
   .pyramid {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal-dialog img {
+    max-width: 100%;
   }
 }
