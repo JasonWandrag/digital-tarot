@@ -81,7 +81,6 @@ body {
   position: relative;
 
   transition: all 0.2s linear;
-  border: 5px solid rgba(0, 0, 0, 0);
 }
 
 .tarot-cardtainer h4 {
@@ -96,16 +95,20 @@ body {
 }
 
 .tarot-cardtainer img {
+  border: 5px solid rgba(0, 0, 0, 0);
+  transition: all 0.2s linear;
   width: 100%;
   margin: 0;
   z-index: 10;
   cursor: pointer;
 }
+.tarot-cardtainer img:hover {
+  border: 5px solid var(--secondary-color);
+}
 
 .tarot-cardtainer:hover {
-  border: 5px solid var(--secondary-color);
   transform: scale(1.01);
-  z-index: 11;
+  z-index: 22;
 }
 
 .tarot {
@@ -252,13 +255,14 @@ img {
 .celtic-cross [card="1"] {
   grid-column: 3 / span 1;
   grid-row: 4 / span 2;
-  z-index: 2;
+  z-index: 21;
 }
+.celtic-cross [card="1"] .overlay,
 .celtic-cross [card="1"] img {
   transform: rotateZ(90deg);
 }
 .celtic-cross [card="1"] h4 {
-  z-index: 3;
+  z-index: 20;
 }
 .celtic-cross [card="2"] {
   grid-column: 2 / span 1;
