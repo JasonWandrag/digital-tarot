@@ -42,7 +42,7 @@ spread.addEventListener("change", () => {
       "#selected-spread"
     ).innerHTML = `<h3>${selectedSpread.spread}</h3>
     <p>${selectedSpread.description}</p>`;
-    createCardNumberInputs(selectedSpread.cards);
+    createCardNumberInputs(selectedSpread.positions.length);
     document.querySelector("#digital-tarot").style.display = "block";
     document.querySelector("#digital-tarot").scrollIntoView();
     document.querySelector("#results").style.display = "none";
@@ -55,16 +55,14 @@ spread.addEventListener("change", () => {
 });
 
 function pickTarot(amt) {
-  if (!validateSelection()) return false;
-  document.querySelector("#submit-btn").disabled = true;
+  nextButton.disabled = true;
   prevButton.disabled = true;
   cards.then((cards) => {
     shuffle(cards);
     let cardsContainer = document.querySelector(".card-description-container");
-    //     reset container
     cardsContainer.innerHTML = "";
     for (let i = 0; i < amt; i++) {
-      cardsContainer.innerHTML += createDescription(
+      cardsContainer.innerHTML += createCard(
         cards[document.getElementsByClassName("card-input")[i].value - 1],
         i
       );
@@ -74,22 +72,45 @@ function pickTarot(amt) {
   });
 }
 
-function createDescription(data, index) {
+function createCard(data, index) {
   const direction = Math.floor(Math.random() * 2);
   return `
-  <div class="tarot-cardtainer" card="${index}">
-  <h4>${index + 1}. ${selectedSpread.positions[index]}</h4>
-        <img src="./images/cards/${data.name_short}.jpg" class="${
+  <div class="tarot-cardtainer" card="${index}"  data-bs-toggle="modal" data-bs-target="#card${index}">
+    <div class="overlay"></div>
+    <h4>${index + 1}. ${selectedSpread.positions[index]}</h4>
+    <img src="./images/cards/${data.name_short}.jpg" class="${
     direction ? "reverse" : ""
   }" />
-        <div class="tarot">
-          <h2>${data.name} - ${data.type}</h2>
-          <h4>${direction ? "Reversed" : "Upright"} meaning: ${
+  </div>
+
+<!-- Modal -->
+  <div class="modal fade" id="card${index}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">${index + 1}. ${
+    selectedSpread.positions[index]
+  }</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body  d-md-flex">
+        <img src="./images/cards/${data.name_short}.jpg" class="${
+    direction ? "reverse img-fluid modal-img" : " img-fluid modal-img"
+  }" />
+          <div class="tarot">
+            <h2>${data.name} - ${data.type} arcana</h2>
+            <h4>${direction ? "Reversed" : "Upright"} meaning: ${
     direction ? data.meaning_rev : data.meaning_up
   }</h4>
-          <p>${data.desc}</p>
+            <p>${data.desc}</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
+    </div>
+  </div>
   `;
 }
 
@@ -113,8 +134,6 @@ function shuffle(array) {
   return array;
 }
 
-// Card Input Wizard
-
 function createCardNumberInputs(amt) {
   cardNumberContainer.innerHTML = "";
   for (let i = 0; i < amt; i++) {
@@ -124,15 +143,8 @@ function createCardNumberInputs(amt) {
         <label class="col-sm-4 col-form-label">${
           selectedSpread.positions[i]
         }</label>
-        <div class="col-sm-6">
+        <div class="col-sm-8">
           <input name="card${i + 1}" class="form-control card-input">
-        </div>
-        <div class="col-sm-2">
-        ${
-          i == amt - 1
-            ? `<button class="btn btn-primary" onclick='pickTarot(${amt})' id="submit-btn">submit</button>`
-            : '<button class="btn btn-primary" disabled>submit</button>'
-        }
         </div>
       </div>
     </div>
@@ -156,6 +168,9 @@ function nextPrev(dir) {
   if (dir !== -1 && !validateSelection()) return false;
   if (dir == -1) {
     selectedCards.pop();
+  }
+  if (dir == 1 && currentTab == tabs.length - 1) {
+    return pickTarot(selectedSpread.positions.length);
   }
   tabs[currentTab].style.display = "none";
   currentTab = currentTab + dir;
