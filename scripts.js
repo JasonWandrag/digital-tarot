@@ -142,9 +142,11 @@ function createCardNumberInputs(amt) {
       <div class="row mb-3">
         <label class="col-sm-4 col-form-label">${
           selectedSpread.positions[i]
-        }</label>
+        } Card</label>
         <div class="col-sm-8">
-          <input name="card${i + 1}" class="form-control card-input">
+          <input name="card${
+            i + 1
+          }" class="form-control card-input" placeholder="Please pick a number between 1-78">
         </div>
       </div>
     </div>
