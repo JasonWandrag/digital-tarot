@@ -1,3 +1,91 @@
+// [
+//   {
+//     spread: "Gestalt 3 Card Spread",
+//     description:
+//       "The Gestalt school of psychology believes that everything is perceived in patterns and that the sum of the parts is different from and greater than the whole. What this means the positions of the cards do not matter, and each individual card will build up the whole picture.<br>Use the 3 card spread when you are in a hurry or have a specific question to answer, the 6 card spread for more detailed or complex issues, and the full 9 card spread for matters which are not clear or involve a major life decision.<br>Focus on a question or an area of concern. Pick your cards. Read over the descriptions of the cards to see if there is a general message from the cards. Take note of which cards naturally fit together (same suit or major arcana), as well as which card seems to be the key to the reading. Use your intuition here. Using the key card as the base, go over the cards again to see what kind of message is given to you",
+//     positions: ["First Card", "Second Card", "Third Card"],
+//   },
+//   {
+//     spread: "Gestalt 6 Card Spread",
+//     description:
+//       "The Gestalt school of psychology believes that everything is perceived in patterns and that the sum of the parts is different from and greater than the whole. What this means the positions of the cards do not matter, and each individual card will build up the whole picture.<br>Use the 3 card spread when you are in a hurry or have a specific question to answer, the 6 card spread for more detailed or complex issues, and the full 9 card spread for matters which are not clear or involve a major life decision.<br>Focus on a question or an area of concern. Pick your cards. Read over the descriptions of the cards to see if there is a general message from the cards. Take note of which cards naturally fit together (same suit or major arcana), as well as which card seems to be the key to the reading. Use your intuition here. Using the key card as the base, go over the cards again to see what kind of message is given to you",
+//     positions: [
+//       "First Card",
+//       "Second Card",
+//       "Third Card",
+//       "Fourth Card",
+//       "Fifth Card",
+//       "Sixth Card",
+//     ],
+//   },
+//   {
+//     spread: "Gestalt 9 Card Spread",
+//     description:
+//       "The Gestalt school of psychology believes that everything is perceived in patterns and that the sum of the parts is different from and greater than the whole. What this means the positions of the cards do not matter, and each individual card will build up the whole picture.<br>Use the 3 card spread when you are in a hurry or have a specific question to answer, the 6 card spread for more detailed or complex issues, and the full 9 card spread for matters which are not clear or involve a major life decision.<br>Focus on a question or an area of concern. Pick your cards. Read over the descriptions of the cards to see if there is a general message from the cards. Take note of which cards naturally fit together (same suit or major arcana), as well as which card seems to be the key to the reading. Use your intuition here. Using the key card as the base, go over the cards again to see what kind of message is given to you",
+//     positions: [
+//       "First Card",
+//       "Second Card",
+//       "Third Card",
+//       "Fourth Card",
+//       "Fifth Card",
+//       "Sixth Card",
+//       "Seventh Card",
+//       "Eighth Card",
+//       "Ninth Card",
+//     ],
+//   },
+//   {
+//     spread: "Horseshoe Spread",
+//     description:
+//       "This spread assigns significance to the positions of the cards which can be helpful with more specific questions and issues.",
+//     positions: [
+//       "Issue",
+//       "Present Influences",
+//       "Unexpected Influences",
+//       "Suggested Action",
+//       "Possible Outcome",
+//     ],
+//     containerClass: "horseshoe",
+//   },
+//   {
+//     spread: "Pyramid Spread",
+//     description:
+//       "The Pyramid is a sacred shape and has been found across the globe, from Egypt to South America. The greatest attention to this are the Pyramids of Giza, which have become spiritual gathering and healing places. The Pyramids are also known to act as transformers of cosmic energy.<br>The Pyramid Spread is therefore especially good for spiritual matters or major life changes.",
+//     positions: [
+//       "The Question",
+//       "The Essence",
+//       "The Head",
+//       "The Heart",
+//       "The Price",
+//       "Unhelpful Influences",
+//       "The Unexpected",
+//       "Helpful Influences",
+//       "Suggested Action",
+//       "Possible Outcome",
+//     ],
+//     containerClass: "pyramid",
+//   },
+//   {
+//     spread: "Celtic Cross Spread",
+//     description:
+//       "This spread is effective for very complex issues or in-depth live reviews. This spread is split up into sections.<br>Cards 1-3 are the center of the reading, 4-7 represent underlying factors based on the elements, and cards 8-11 are the pathway cards",
+//     positions: [
+//       "Present Position",
+//       "Issue Dominating Your Life",
+//       "Obsticles to Happiness / Success",
+//       "Earth",
+//       "Air",
+//       "Fire",
+//       "Water",
+//       "Suggested Action",
+//       "Helpful Influences",
+//       "Short-Term Outcome",
+//       "Long-Term Outcome",
+//     ],
+//     containerClass: "celtic-cross",
+//   },
+// ];
+
 let selectedSpread;
 let selectedCards = [];
 
@@ -14,9 +102,9 @@ let cardSpreads = new Promise((resolve, reject) => {
   fetch("./card-spreads.json")
     .then((res) => res.json())
     .then((spreads) => {
-      spreads.forEach((card) => {
+      spreads.forEach((card, i) => {
         spread.innerHTML += `
-      <option value="${card.id}">${card.spread}</option>
+      <option value="${i}">${card.spread}</option>
     `;
       });
       resolve(spreads);
