@@ -1,39 +1,39 @@
 // [
-//   {
-//     spread: "Gestalt 3 Card Spread",
-//     description:
-//       "The Gestalt school of psychology believes that everything is perceived in patterns and that the sum of the parts is different from and greater than the whole. What this means the positions of the cards do not matter, and each individual card will build up the whole picture.<br>Use the 3 card spread when you are in a hurry or have a specific question to answer, the 6 card spread for more detailed or complex issues, and the full 9 card spread for matters which are not clear or involve a major life decision.<br>Focus on a question or an area of concern. Pick your cards. Read over the descriptions of the cards to see if there is a general message from the cards. Take note of which cards naturally fit together (same suit or major arcana), as well as which card seems to be the key to the reading. Use your intuition here. Using the key card as the base, go over the cards again to see what kind of message is given to you",
-//     positions: ["First Card", "Second Card", "Third Card"],
-//   },
-//   {
-//     spread: "Gestalt 6 Card Spread",
-//     description:
-//       "The Gestalt school of psychology believes that everything is perceived in patterns and that the sum of the parts is different from and greater than the whole. What this means the positions of the cards do not matter, and each individual card will build up the whole picture.<br>Use the 3 card spread when you are in a hurry or have a specific question to answer, the 6 card spread for more detailed or complex issues, and the full 9 card spread for matters which are not clear or involve a major life decision.<br>Focus on a question or an area of concern. Pick your cards. Read over the descriptions of the cards to see if there is a general message from the cards. Take note of which cards naturally fit together (same suit or major arcana), as well as which card seems to be the key to the reading. Use your intuition here. Using the key card as the base, go over the cards again to see what kind of message is given to you",
-//     positions: [
-//       "First Card",
-//       "Second Card",
-//       "Third Card",
-//       "Fourth Card",
-//       "Fifth Card",
-//       "Sixth Card",
-//     ],
-//   },
-//   {
-//     spread: "Gestalt 9 Card Spread",
-//     description:
-//       "The Gestalt school of psychology believes that everything is perceived in patterns and that the sum of the parts is different from and greater than the whole. What this means the positions of the cards do not matter, and each individual card will build up the whole picture.<br>Use the 3 card spread when you are in a hurry or have a specific question to answer, the 6 card spread for more detailed or complex issues, and the full 9 card spread for matters which are not clear or involve a major life decision.<br>Focus on a question or an area of concern. Pick your cards. Read over the descriptions of the cards to see if there is a general message from the cards. Take note of which cards naturally fit together (same suit or major arcana), as well as which card seems to be the key to the reading. Use your intuition here. Using the key card as the base, go over the cards again to see what kind of message is given to you",
-//     positions: [
-//       "First Card",
-//       "Second Card",
-//       "Third Card",
-//       "Fourth Card",
-//       "Fifth Card",
-//       "Sixth Card",
-//       "Seventh Card",
-//       "Eighth Card",
-//       "Ninth Card",
-//     ],
-//   },
+// {
+//   spread: "Gestalt 3 Card Spread",
+//   description:
+//     "The Gestalt school of psychology believes that everything is perceived in patterns and that the sum of the parts is different from and greater than the whole. What this means the positions of the cards do not matter, and each individual card will build up the whole picture.<br>Use the 3 card spread when you are in a hurry or have a specific question to answer, the 6 card spread for more detailed or complex issues, and the full 9 card spread for matters which are not clear or involve a major life decision.<br>Focus on a question or an area of concern. Pick your cards. Read over the descriptions of the cards to see if there is a general message from the cards. Take note of which cards naturally fit together (same suit or major arcana), as well as which card seems to be the key to the reading. Use your intuition here. Using the key card as the base, go over the cards again to see what kind of message is given to you",
+//   positions: ["First Card", "Second Card", "Third Card"],
+// },
+// {
+//   spread: "Gestalt 6 Card Spread",
+//   description:
+//     "The Gestalt school of psychology believes that everything is perceived in patterns and that the sum of the parts is different from and greater than the whole. What this means the positions of the cards do not matter, and each individual card will build up the whole picture.<br>Use the 3 card spread when you are in a hurry or have a specific question to answer, the 6 card spread for more detailed or complex issues, and the full 9 card spread for matters which are not clear or involve a major life decision.<br>Focus on a question or an area of concern. Pick your cards. Read over the descriptions of the cards to see if there is a general message from the cards. Take note of which cards naturally fit together (same suit or major arcana), as well as which card seems to be the key to the reading. Use your intuition here. Using the key card as the base, go over the cards again to see what kind of message is given to you",
+//   positions: [
+//     "First Card",
+//     "Second Card",
+//     "Third Card",
+//     "Fourth Card",
+//     "Fifth Card",
+//     "Sixth Card",
+//   ],
+// },
+// {
+//   spread: "Gestalt 9 Card Spread",
+//   description:
+//     "The Gestalt school of psychology believes that everything is perceived in patterns and that the sum of the parts is different from and greater than the whole. What this means the positions of the cards do not matter, and each individual card will build up the whole picture.<br>Use the 3 card spread when you are in a hurry or have a specific question to answer, the 6 card spread for more detailed or complex issues, and the full 9 card spread for matters which are not clear or involve a major life decision.<br>Focus on a question or an area of concern. Pick your cards. Read over the descriptions of the cards to see if there is a general message from the cards. Take note of which cards naturally fit together (same suit or major arcana), as well as which card seems to be the key to the reading. Use your intuition here. Using the key card as the base, go over the cards again to see what kind of message is given to you",
+//   positions: [
+//     "First Card",
+//     "Second Card",
+//     "Third Card",
+//     "Fourth Card",
+//     "Fifth Card",
+//     "Sixth Card",
+//     "Seventh Card",
+//     "Eighth Card",
+//     "Ninth Card",
+//   ],
+// },
 //   {
 //     spread: "Horseshoe Spread",
 //     description:
